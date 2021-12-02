@@ -16,6 +16,9 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import {RouterModule} from "@angular/router";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HomeComponent } from './components/home/home.component';
+import { ProductDetailsComponent } from './components/product-details/product-details.component';
+import {MatGridListModule} from "@angular/material/grid-list";
 
 @NgModule({
   declarations: [
@@ -26,7 +29,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     NavbarComponent,
     ProductItemComponent,
     SearchComponent,
-    StarsComponent
+    StarsComponent,
+    HomeComponent,
+    ProductDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -37,6 +42,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ReactiveFormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    MatGridListModule,
   ],
   providers: [ProductService],
   bootstrap: [AppComponent]

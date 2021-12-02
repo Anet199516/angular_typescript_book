@@ -1,0 +1,19 @@
+:host {
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    height: 100%;
+
+    &__search {
+      grid-column-start: 1;
+      grid-column-end: 1;
+    }
+
+    &__products {
+      grid-column-start: 2;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}

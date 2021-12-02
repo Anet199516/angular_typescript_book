@@ -1,1 +1,51 @@
-<p>search works!</p>
+<div>
+  <form [formGroup]="form">
+    <div class="o-field">
+      <label class="o-field__label">Product Title</label>
+
+      <div class="o-field__inner">
+        <input type="text"
+               placeholder="Enter title"
+               [formControlName]="FORM_KEY.title">
+      </div>
+
+      <div *ngIf="FC.title.touched && FC.title.errors as e"
+           class="o-field__error">
+        <div *ngIf="e[ERROR_KEY.Required]">{{ 'Required' }}</div>
+        <div *ngIf="e[ERROR_KEY.MaxLength] as v">{{ processMaxLengthError(v) }}</div>
+      </div>
+    </div>
+
+    <div class="o-field">
+      <label class="o-field__label">Price</label>
+
+      <div class="o-field__inner">
+        <input type="text"
+               placeholder="Enter price"
+               [formControlName]="FORM_KEY.price">
+      </div>
+
+      <div *ngIf="FC.price.touched && FC.price.errors as e"
+           class="o-field__error">
+        <div *ngIf="e[ERROR_KEY.Required]">{{ 'Required' }}</div>
+        <div *ngIf="e[ERROR_KEY.MaxLength] as v">{{ processMaxLengthError(v) }}</div>
+      </div>
+    </div>
+
+    <div class="o-field">
+      <label class="o-field__label">Category</label>
+
+      <div class="o-field__inner">
+        <input type="text"
+               placeholder="Enter title"
+               [formControlName]="FORM_KEY.category">
+      </div>
+
+      <div *ngIf="FC.category.touched && FC.title.errors as e"
+           class="o-field__error">
+        <div *ngIf="e[ERROR_KEY.Required]">{{ 'Required' }}</div>
+        <div *ngIf="e[ERROR_KEY.MaxLength] as v">{{ processMaxLengthError(v) }}</div>
+      </div>
+    </div>
+  </form>
+</div>
